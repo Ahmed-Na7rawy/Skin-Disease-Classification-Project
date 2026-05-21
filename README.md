@@ -37,6 +37,33 @@ It includes the complete pipeline: from dataset exploration and model training (
 
 ---
 
+## Model Evaluation Metrics
+
+Our EfficientNetV2 model was evaluated on a held-out test dataset, utilizing Test-Time Augmentation (TTA). 
+
+**Overall Accuracy: 75.12%**
+
+### Per-Class Accuracy
+- **Acne:** 91.7%
+- **Melanoma:** 81.9%
+- **Fungal:** 77.5%
+- **Eczema:** 73.4%
+- **Vitiligo:** 67.8%
+- **Psoriasis:** 61.1%
+
+### Confusion Matrix
+
+| True \ Predicted | Acne | Eczema | Fungal | Melanoma | Psoriasis | Vitiligo |
+|---|---|---|---|---|---|---|
+| **Acne** | 286 | 6 | 9 | 0 | 3 | 8 |
+| **Eczema** | 12 | 317 | 42 | 2 | 40 | 19 |
+| **Fungal** | 8 | 29 | 252 | 4 | 22 | 10 |
+| **Melanoma** | 1 | 3 | 9 | 95 | 1 | 7 |
+| **Psoriasis** | 15 | 47 | 60 | 2 | 215 | 13 |
+| **Vitiligo** | 13 | 7 | 11 | 6 | 9 | 97 |
+
+---
+
 ## How to Run the API Locally
 
 1. **Install dependencies:**
