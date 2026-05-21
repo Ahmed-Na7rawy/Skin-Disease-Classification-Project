@@ -5,7 +5,7 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.100%2B-009688)
 
 ## Overview
-This repository contains my graduation project: an end-to-end Deep Learning system for classifying skin diseases. The project leverages an **EfficientNetV2** (and VGG19) architecture to classify dermatological images into 6 distinct categories with high accuracy.
+This repository contains my graduation project: an end-to-end Deep Learning system for classifying skin diseases. The project leverages an **EfficientNetV2** architecture to classify dermatological images into 6 distinct categories with high accuracy.
 
 It includes the complete pipeline: from dataset exploration and model training (via Jupyter Notebooks) to a fully functional **REST API** using FastAPI, and a Terminal GUI for quick testing.
 
@@ -22,7 +22,6 @@ It includes the complete pipeline: from dataset exploration and model training (
 ## Repository Structure
 
 - `efficient_net_training.ipynb`: The primary notebook detailing data preprocessing, EfficientNetV2 training, Test-Time Augmentation (TTA), and evaluation.
-- `skin_disease_classification_vgg19.ipynb`: Alternate baseline model using VGG19.
 - `api/`: Contains the FastAPI application (`app.py`), serving the trained `.h5` model as a REST endpoint.
 - `api/test_api.py`: Automated integration test suite for the REST API.
 - `model/`: Inference scripts (`evaluate_model.py`) and a Terminal GUI (`skin_gui.py`) for evaluating the models.
