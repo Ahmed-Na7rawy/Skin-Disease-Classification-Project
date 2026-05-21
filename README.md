@@ -7,7 +7,7 @@
 ## Overview
 This repository contains my graduation project: an end-to-end Deep Learning system for classifying skin diseases. The project leverages an **EfficientNetV2** architecture to classify dermatological images into 6 distinct categories with high accuracy.
 
-It includes the complete pipeline: from dataset exploration and model training (via Jupyter Notebooks) to a fully functional **REST API** using FastAPI, and a Terminal GUI for quick testing.
+It includes the complete pipeline: from dataset exploration and model training (via Jupyter Notebooks) to a fully functional **REST API** using FastAPI.
 
 ### Supported Classes
 1. Acne
@@ -24,7 +24,6 @@ It includes the complete pipeline: from dataset exploration and model training (
 - `efficient_net_training.ipynb`: The primary notebook detailing data preprocessing, EfficientNetV2 training, Test-Time Augmentation (TTA), and evaluation.
 - `api/`: Contains the FastAPI application (`app.py`), serving the trained `.h5` model as a REST endpoint.
 - `api/test_api.py`: Automated integration test suite for the REST API.
-- `model/`: Inference scripts (`evaluate_model.py`) and a Terminal GUI (`skin_gui.py`) for evaluating the models.
 
 *(Note: Datasets and trained `.h5` / `.keras` model weights are excluded from this repository due to GitHub size limits).*
 
@@ -35,7 +34,6 @@ It includes the complete pipeline: from dataset exploration and model training (
 - **High-Accuracy Classification**: Fine-tuned EfficientNetV2 architecture.
 - **Test-Time Augmentation (TTA)**: Uses 7 augmented crops/flips during inference to dramatically improve confidence and accuracy.
 - **REST API**: Production-ready FastAPI implementation with CORS, lazy-loading, and Swagger documentation.
-- **Interactive Terminal GUI**: A curses-based UI (`skin_gui.py`) to run predictions quickly from the command line.
 
 ---
 
@@ -48,7 +46,7 @@ It includes the complete pipeline: from dataset exploration and model training (
    ```
 
 2. **Place the trained model:**
-   Ensure your trained model is located at `../model/best_skin_model_effnet.h5` relative to the `api` folder, or set the `SKIN_MODEL_PATH` environment variable.
+   Ensure your trained model is named `best_skin_model_effnet.h5` and you set the `SKIN_MODEL_PATH` environment variable to its location.
 
 3. **Start the server:**
    ```bash
